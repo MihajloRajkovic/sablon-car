@@ -1,0 +1,16 @@
+<h1>Lista Auta</h1>
+<input type="text" [(ngModel)]="searchKeyword" placeholder="Pretraži auta..." /><div class="row">
+  <button (click)="dodaj()">Dodaj auto</button>
+</div>
+<div *ngFor="let car of cars">
+  <div class="car-card">
+    
+    <h2>{{ car.Name }}</h2>
+    <h2> {{ car.Year }}</h2>
+    <p>{{car.Horsepower}}</p>
+    <p>ovde treba svi detaji auta</p>
+    <button (click)="viewDetails(car.id)">Pregledaj Detalje</button>
+    <button (click)="deleteCar(car.id)">Obriši</button>
+    <button (click)="editCar(car.id)">Ažuriraj</button>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<h2>azuriraj
+</h2>
+
+<form [formGroup]="editCarForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" id="id" formControlName="id" required>
+  </div>
+  <div class="form-group">
+    <label for="Miles_per_Gallon">Miles per Gallon</label>
+    <input type="text" id="Miles_per_Gallon" formControlName="Miles_per_Gallon" required>
+  </div>
+  <div class="form-group">
+    <label for="cylinders">Cylinders</label>
+    <input type="text" id="cylinders" formControlName="cylinders" required>
+  </div>
+  <div class="form-group">
+    <label for="displacement">Displacement</label>
+    <input type="text" id="displacement" formControlName="displacement" required>
+  </div>
+  <div class="form-group">
+    <label for="horsepower">Horsepower</label>
+    <input type="text" id="horsepower" formControlName="horsepower" required>
+  </div>
+  <div class="form-group">
+    <label for="weightInLbs">Weight in lbs</label>
+    <input type="text" id="weightInLbs" formControlName="weightInLbs" required>
+  </div>
+  <div class="form-group">
+    <label for="acceleration">Acceleration</label>
+    <input type="text" id="acceleration" formControlName="acceleration" required>
+  </div>
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input type="text" id="year" formControlName="year" required>
+  </div>
+  <div class="form-group">
+    <label for="origin">Origin</label>
+    <input type="text" id="origin" formControlName="origin" required>
+  </div>
+  <button type="submit" [disabled]="!editCarForm.valid">Kreiraj</button>
+</form>
